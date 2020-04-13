@@ -13,13 +13,17 @@ message(STATUS "Building libprintf at ${PRINTF_ROOT}")
 #*******************************************************************************
 # Command Line Interface (CLI) Library
 #*******************************************************************************
-add_definitions(-Wno-error=implicit-fallthrough)
-
 set(TARGET_NAME "tpf")
 set(TARGET_SOURCES
     ${PRINTF_ROOT}/tinyprintf.c
 )
 add_library(${TARGET_NAME} ${TARGET_SOURCES})
+target_compile_options(${TARGET_NAME} PRIVATE
+    -Wno-error=implicit-fallthrough
+)
+target_compile_definitions(${TARGET_NAME} PUBLIC
+    "TINYPRINTF_OVERRIDE_LIBC=0"
+)
 target_include_directories(${TARGET_NAME} PUBLIC
     ${PRINTF_ROOT}
 )
