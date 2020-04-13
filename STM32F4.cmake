@@ -11,4 +11,3 @@ target_include_directories(${TARGET_NAME} PUBLIC
     mbed-os/targets/TARGET_STM/TARGET_STM32F4/device
     mbed-os/targets/TARGET_STM/TARGET_${ARCH_NAME}/TARGET_STM32F407xE/device
 )
-target_compile_options(${TARGET_NAME} PRIVATE "-Wno-error=unused-parameter")
