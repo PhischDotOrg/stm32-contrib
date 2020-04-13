@@ -3,7 +3,7 @@
 	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
 [submodule "mbed-os"]
 	path = mbed-os
-	url = https://github.com/ARMmbed/mbed-os.git
+	url = git@github.com:PhischDotOrg/mbed-os.git
 [submodule "printf"]
 	path = printf
 	url = https://github.com/cjlano/tinyprintf.git
