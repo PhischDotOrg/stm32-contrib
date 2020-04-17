@@ -9,7 +9,12 @@ get_property(ARCH_NAME GLOBAL PROPERTY ARCH_NAME)
 ###############################################################################
 set(FREERTOS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/FreeRTOS)
 set(FREERTOS_INCLUDE_DIRECTORY ${FREERTOS_DIRECTORY}/include)
-set(FREERTOS_PORT_DIRECTORY ${FREERTOS_DIRECTORY}/portable/GCC/ARM_CM4F)
+
+if ("${CMAKE_SYSTEM_NAME}" STREQUAL "Generic")
+    set(FREERTOS_PORT_DIRECTORY ${FREERTOS_DIRECTORY}/portable/GCC/ARM_CM4F)
+elseif ("${CMAKE_SYSTEM_NAME}" STREQUAL "Linux")
+    set(FREERTOS_PORT_DIRECTORY ${FREERTOS_DIRECTORY}/portable/GCC/IA32_flat)
+endif()
 
 set(TARGET_NAME FreeRTOS)
 set(TARGET_SRC
@@ -28,4 +33,10 @@ target_include_directories(${TARGET_NAME} PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${FREERTOS_INCLUDE_DIRECTORY}
     ${FREERTOS_PORT_DIRECTORY}
+)
+
+target_compile_options(${TARGET_NAME} PRIVATE
+    -Wno-error=pointer-to-int-cast
+    -Wno-error=int-to-pointer-cast
+    -Wno-error=type-limits
 )

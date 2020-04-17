@@ -53,7 +53,11 @@
 #define configCPU_CLOCK_HZ				( SystemCoreClock )
 #define configTICK_RATE_HZ				( ( TickType_t ) 1000 )
 #define configMAX_PRIORITIES			( 5 )
-#define configMINIMAL_STACK_SIZE		( ( unsigned short ) 128 )
+#define configMINIMAL_STACK_SIZE		( 128 )
+#define configISR_STACK_SIZE            ( configMINIMAL_STACK_SIZE * 2)
+#define configUSE_PORT_OPTIMISED_TASK_SELECTION 1
+#define configUSE_COMMON_INTERRUPT_ENTRY_POINT  1
+#define configMAX_API_CALL_INTERRUPT_PRIORITY   2
 #define configTOTAL_HEAP_SIZE			( ( size_t ) ( 16 * 1024 ) )
 #define configMAX_TASK_NAME_LEN			( 10 )
 #define configUSE_TRACE_FACILITY		1

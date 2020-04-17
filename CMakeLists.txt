@@ -1,9 +1,7 @@
 #-
 # $Copyright$
 #
-
-get_property(ARCH_NAME GLOBAL PROPERTY ARCH_NAME)
+message(STATUS "Target System: ${ARCH_NAME} @ ${STM32F4_CPU_TYPE}")
 
 include(printf.cmake)
-include(FreeRTOS.cmake)
 include(${ARCH_NAME}.cmake)
