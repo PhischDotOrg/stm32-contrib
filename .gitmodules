@@ -7,3 +7,6 @@
 [submodule "printf"]
 	path = printf
 	url = https://github.com/cjlano/tinyprintf.git
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest.git

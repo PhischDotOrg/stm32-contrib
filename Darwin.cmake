@@ -3,6 +3,8 @@ message(STATUS "Target System: ${ARCH_NAME} @ ${CMAKE_SYSTEM_PROCESSOR}")
 set(ARCH_NAME           "STM32F4")
 set(STM32F4_CPU_TYPE    "STM32F407xG")
 
+add_subdirectory(googletest)
+
 # Stub-out FreeRTOS; it can't be built outside the embedded environment.
 add_library(FreeRTOS
      empty.c
