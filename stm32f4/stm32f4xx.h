@@ -142,8 +142,35 @@
 /** @addtogroup Device_Included
   * @{
   */
-
-#if defined(STM32F405xx)
+#if defined(STM32F100xB)
+  #include "stm32f100xb.h"
+#elif defined(STM32F100xE)
+  #include "stm32f100xe.h"
+#elif defined(STM32F101x6)
+  #include "stm32f101x6.h"
+#elif defined(STM32F101xB)
+  #include "stm32f101xb.h"
+#elif defined(STM32F101xE)
+  #include "stm32f101xe.h"
+#elif defined(STM32F101xG)
+  #include "stm32f101xg.h"
+#elif defined(STM32F102x6)
+  #include "stm32f102x6.h"
+#elif defined(STM32F102xB)
+  #include "stm32f102xb.h"
+#elif defined(STM32F103x6)
+  #include "stm32f103x6.h"
+#elif defined(STM32F103xB)
+  #include "stm32f103xb.h"
+#elif defined(STM32F103xE)
+  #include "stm32f103xe.h"
+#elif defined(STM32F103xG)
+  #include "stm32f103xg.h"
+#elif defined(STM32F105xC)
+  #include "stm32f105xc.h"
+#elif defined(STM32F107xC)
+  #include "stm32f107xc.h"
+#elif defined(STM32F405xx)
   #include "stm32f405xx.h"
 #elif defined(STM32F415xx)
   #include "stm32f415xx.h"

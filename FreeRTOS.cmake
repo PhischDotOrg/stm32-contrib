@@ -1,5 +1,3 @@
-get_property(ARCH_NAME GLOBAL PROPERTY ARCH_NAME)
-
 ###############################################################################
 # If we're building on a "Generic" system, assume that this build is for an
 # embedded processor. Chose the FreeRTOS 'port.c' file based on the CPU type.
@@ -11,7 +9,11 @@ set(FREERTOS_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/FreeRTOS)
 set(FREERTOS_INCLUDE_DIRECTORY ${FREERTOS_DIRECTORY}/include)
 
 set(TARGET_NAME FreeRTOS)
-set(FREERTOS_PORT_DIRECTORY ${FREERTOS_DIRECTORY}/portable/GCC/ARM_CM4F)
+if (${CMAKE_SYSTEM_PROCESSOR} STREQUAL "cortex-m4")
+    set(FREERTOS_PORT_DIRECTORY ${FREERTOS_DIRECTORY}/portable/GCC/ARM_CM4F)
+elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "cortex-m3")
+    set(FREERTOS_PORT_DIRECTORY ${FREERTOS_DIRECTORY}/portable/GCC/ARM_CM3)
+endif()
 
 if(NOT UNITTEST)
     set(TARGET_SRC
