@@ -58,7 +58,6 @@
 #define configUSE_PORT_OPTIMISED_TASK_SELECTION 1
 #define configUSE_COMMON_INTERRUPT_ENTRY_POINT  1
 #define configMAX_API_CALL_INTERRUPT_PRIORITY   2
-#define configTOTAL_HEAP_SIZE			( ( size_t ) ( 16 * 1024 ) )
 #define configMAX_TASK_NAME_LEN			( 10 )
 #define configUSE_TRACE_FACILITY		1
 #define configUSE_16_BIT_TICKS			0
@@ -70,6 +69,11 @@
 #define configUSE_MALLOC_FAILED_HOOK	1
 #define configUSE_APPLICATION_TASK_TAG	0
 #define configUSE_COUNTING_SEMAPHORES	1
+
+/* Allocate Heap in Linker Script */
+#define configAPPLICATION_ALLOCATED_HEAP 1
+
+#define configTOTAL_HEAP_SIZE			( (size_t) 4096 )
 
 #if defined(WITH_PROFILING)
     #define configGENERATE_RUN_TIME_STATS           1
