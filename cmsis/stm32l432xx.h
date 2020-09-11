@@ -612,12 +612,8 @@ typedef struct
   __IO uint32_t AHB2ENR;     /*!< RCC AHB2 peripheral clocks enable register,                              Address offset: 0x4C */
   __IO uint32_t AHB3ENR;     /*!< RCC AHB3 peripheral clocks enable register,                              Address offset: 0x50 */
   uint32_t      RESERVED3;   /*!< Reserved,                                                                Address offset: 0x54 */
-#if 1
-  __IO uint32_t APB1ENR[2];  /*!< RCC APB1 peripheral clocks enable register 1,                            Address offset: 0x58 */
-#else
   __IO uint32_t APB1ENR1;    /*!< RCC APB1 peripheral clocks enable register 1,                            Address offset: 0x58 */
   __IO uint32_t APB1ENR2;    /*!< RCC APB1 peripheral clocks enable register 2,                            Address offset: 0x5C */
-#endif
   __IO uint32_t APB2ENR;     /*!< RCC APB2 peripheral clocks enable register,                              Address offset: 0x60 */
   uint32_t      RESERVED4;   /*!< Reserved,                                                                Address offset: 0x64 */
   __IO uint32_t AHB1SMENR;   /*!< RCC AHB1 peripheral clocks enable in sleep and stop modes register,      Address offset: 0x68 */
