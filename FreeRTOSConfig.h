@@ -73,7 +73,7 @@
 /* Allocate Heap in Linker Script */
 #define configAPPLICATION_ALLOCATED_HEAP 1
 
-#define configTOTAL_HEAP_SIZE			( (size_t) 4096 )
+#define configTOTAL_HEAP_SIZE			( (size_t) 4096 * 2 )
 
 #if defined(WITH_PROFILING)
     #define configGENERATE_RUN_TIME_STATS           1
