@@ -42,8 +42,11 @@ if(NOT UNITTEST)
         -Wno-error=type-limits
     )
 else()
-    add_library(${TARGET_NAME} INTERFACE)
-    target_include_directories(${TARGET_NAME} INTERFACE
+    set(TARGET_SRC
+        StubFreeRTOS.cpp
+    )
+    add_library(${TARGET_NAME} ${TARGET_SRC})
+    target_include_directories(${TARGET_NAME} PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}
         ${FREERTOS_INCLUDE_DIRECTORY}
         ${FREERTOS_PORT_DIRECTORY}
