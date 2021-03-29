@@ -10,3 +10,6 @@
 [submodule "mbed-os"]
 	path = mbed-os
 	url = git@github.com:PhischDotOrg/mbed-os.git
+[submodule "f1usb"]
+	path = f1usb
+	url = git@github.com:PhischDotOrg/f1usb.git
