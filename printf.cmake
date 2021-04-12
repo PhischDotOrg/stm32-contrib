@@ -1,9 +1,6 @@
 #-
 # $Copyright$
 #
-cmake_minimum_required(VERSION 2.8)
-project(phisch)
-
 set(PRINTF_ROOT ${CMAKE_CURRENT_SOURCE_DIR}/printf)
 set_property(GLOBAL PROPERTY PRINTF_ROOT ${PRINTF_ROOT})
 
