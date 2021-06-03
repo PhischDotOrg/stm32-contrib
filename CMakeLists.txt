@@ -18,3 +18,5 @@ if(UNITTEST)
 # else()
 #     message(FATAL_ERROR "UNITTEST not defined")
 endif()
+
+add_subdirectory(f1usb/src)
