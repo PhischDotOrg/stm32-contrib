@@ -15,8 +15,9 @@ target_include_directories(${TARGET_NAME} INTERFACE
 
 if(UNITTEST)
     add_subdirectory(googletest)
-# else()
-#     message(FATAL_ERROR "UNITTEST not defined")
 endif()
 
-add_subdirectory(f1usb/src)
+if ("${CMAKE_SYSTEM_NAME}" STREQUAL "Generic")
+    add_subdirectory(f1usb/src)
+endif()
+
