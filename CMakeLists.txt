@@ -17,7 +17,8 @@ if(UNITTEST)
     add_subdirectory(googletest)
 endif()
 
-if ("${CMAKE_SYSTEM_NAME}" STREQUAL "Generic")
-    add_subdirectory(f1usb/src)
-endif()
+# Uncomment to build the f1usb Project
+# if ("${CMAKE_SYSTEM_NAME}" STREQUAL "Generic")
+#     add_subdirectory(f1usb/src)
+# endif()
 
