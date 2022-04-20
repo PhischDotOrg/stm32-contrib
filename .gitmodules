@@ -7,6 +7,6 @@
 [submodule "googletest"]
 	path = googletest
 	url = https://github.com/google/googletest.git
-[submodule "mbed-os"]
-	path = mbed-os
-	url = git@github.com:PhischDotOrg/mbed-os.git
+[submodule "CMSIS_5"]
+	path = CMSIS_5
+	url = https://github.com/ARM-software/CMSIS_5.git
